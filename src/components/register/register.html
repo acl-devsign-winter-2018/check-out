@@ -7,23 +7,23 @@
     <legend>New Account Information</legend>
 
     <label for="firstname">First Name:</label>
-    <input name="firstname" id="firstname" type="text" required>
+    <input name="firstname" id="firstname" type="text" placeholder="Johnny" required>
     
     <label for="lastname">Last Name:</label>
-    <input name="lastname" id="lastname" type="text" required>
+    <input name="lastname" id="lastname" type="text" placeholder="Appleseed" rrequired>
 
     <label for="email">Email:</label>
     <input name="email" id="email" type="email"
     pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
-    title="Please provde an email in the form of you@somedomain.sometld" required>
+    title="Please provde an email in the form of you@somedomain.sometld" placeholder="johnny@appleseed.com" rrequired>
 
     <label for="phone">Phone:</label>
-    <input name="phone" id="phone" type="text" required>
+    <input name="phone" id="phone" type="text" placeholder="503-333-3333" rrequired>
 
     <label for="password">Password:</label>
     <input name="password" id="password" type="password" minlength="6" required>
 
   </fieldset>
-  <button type="submit">Create Account</button>
+  <button type="submit" disabled>Create Account</button>
 
 </form>
