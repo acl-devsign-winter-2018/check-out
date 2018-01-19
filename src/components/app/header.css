@@ -9,3 +9,15 @@
   color: #008834;
   border-bottom: 0px;
 }
+
+.ulist {
+  display: flex;
+}
+
+.ulist li{
+  padding: 0 .7rem;
+}
+
+nav {
+  justify-content: flex-end;
+}
