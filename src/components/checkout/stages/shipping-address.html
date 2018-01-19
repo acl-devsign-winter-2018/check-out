@@ -7,9 +7,9 @@
     <label for="last-name">Last name *</label>
       <input name="last-name" id="last-name" type="text" required>
     <label for="address-1">Address Line 1 *</label>
-      <input name="address-1" id="address-1" type="text" required>
-    <label for="address-2">Address Line 2 *</label>
-      <input name="address-2" id="address-2" type="text" required>
+      <input name="address-1" id="address-1" type="text" placeholder="Street address or PO box, etc." required>
+    <label for="address-2">Address Line 2</label>
+      <input name="address-2" id="address-2" placeholder="Apt., suite, unit, building, floor, etc." type="text">
     <label for="city">City *</label>
       <input name="city" id="city" type="city" required>
     <label for="state-providence">State / Providence *</label>
@@ -320,7 +320,7 @@
         <option value="ZW">Zimbabwe</option>
       </select>
     <label for="phone">Phone number *</label>
-      <input name="phone" id="phone" type="tel" required>
+      <input name="phone" id="phone" type="tel" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
       <p>We need your number in case there are any issues with your order</p>
     <label for="billing-same">Use this address for billing</label>
       <input name="billing-same" id="billing-same" type="checkbox">
