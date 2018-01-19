@@ -13,6 +13,17 @@ export default class Login {
     console.log('would have submitted', obj);
   }
 
+  checkPassword(password) { //TODO: stretch goal add number
+    const target = password.target;
+    target.setCustomValidity('');
+    if(!target.checkValidity()) return; //check for minimum length
+
+    const valid = target.value.toLowerCase() !== target.value; //check for uppercase
+    if(!valid) {
+      target.setCustomValidity('Password must contain at least one uppercase character');
+    }
+  }
+
   render() {
     const dom = template.clone();
 
@@ -37,19 +48,16 @@ export default class Login {
     }, true);
 
     this.submit = dom.querySelector('button[type=submit]');
+    const guest = dom.querySelector('#guest');
+
+    guest.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.location.hash = 'checkout';
+    });
 
     const password = dom.querySelector('input[type=password');
 
-    password.addEventListener('keyup', event => {
-      const target = event.target;
-      target.setCustomValidity('');
-      if(!target.checkValidity()) return;
-
-      const valid = target.value.toLowerCase() !== target.value;
-      if(!valid) {
-        target.setCustomValidity('Password must contain at least one uppercase character');
-      }
-    });
+    password.addEventListener('keyup', event => this.checkPassword(event));
 
     return dom;
   } //render
