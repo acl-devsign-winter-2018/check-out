@@ -2,6 +2,7 @@ import html from './checkout.html';
 import './checkout.css';
 import Template from '../Template';
 import { removeChildren } from '../dom';
+import ShippingAddress from './stages/ShippingAddress';
 
 const template = new Template(html);
 
@@ -10,9 +11,9 @@ export default class Checkout {
   render() {
     const dom = template.clone();
 
-    // const checkoutStage = dom.querySelector('checkout-stage');
-    // const shippingAddress = new ShippingAddress();
-    // checkoutStage.appendChild(shippingAddress.render());
+    const checkoutStage = dom.querySelector('#checkout-stage');
+    const shippingAddress = new ShippingAddress();
+    checkoutStage.appendChild(shippingAddress.render());
 
     // const shippingMethod = new ShippingMethod();
     // checkoutStage.appendChild(shippingMethod.render());
