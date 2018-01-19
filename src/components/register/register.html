@@ -1,5 +1,29 @@
 <h2>Register</h2>
+<p>Please fill out the form to create an account, thank you!</p>
 
-<form>
-  
+<form class="register">
+  <fieldset>
+
+    <legend>New Account Information</legend>
+
+    <label for="firstname">First Name:</label>
+    <input name="firstname" id="firstname" type="text" required>
+    
+    <label for="lastname">Last Name:</label>
+    <input name="lastname" id="lastname" type="text" required>
+
+    <label for="email">Email:</label>
+    <input name="email" id="email" type="email"
+    pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
+    title="Please provde an email in the form of you@somedomain.sometld" required>
+
+    <label for="phone">Phone:</label>
+    <input name="phone" id="phone" type="text" required>
+
+    <label for="password">Password:</label>
+    <input name="password" id="password" type="password" minlength="6" required>
+
+  </fieldset>
+  <button type="submit">Create Account</button>
+
 </form>
