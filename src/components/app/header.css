@@ -1,0 +1,11 @@
+.logo {
+  color: #008834;
+  border-bottom: 0px;
+  transition: none;
+  font-size: 3.5rem;
+}
+
+.logo:hover {
+  color: #008834;
+  border-bottom: 0px;
+}

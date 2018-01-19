@@ -1,3 +1,15 @@
-p {
-  color: steelblue;
+header {
+  padding: 2rem 2rem 1rem;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+footer {
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
 }
