@@ -28,7 +28,11 @@ export default class Login {
     const dom = template.clone();
 
     const form = dom.querySelector('form');
-
+    const guest = dom.querySelector('#guest');
+    const password = dom.querySelector('input[type=password');
+    
+    this.submit = dom.querySelector('button[type=submit]');
+    
     form.addEventListener('submit', event => {
       event.preventDefault();
       this.handleSubmit(event.target);
@@ -47,15 +51,11 @@ export default class Login {
       }
     }, true);
 
-    this.submit = dom.querySelector('button[type=submit]');
-    const guest = dom.querySelector('#guest');
 
     guest.addEventListener('click', (event) => {
       event.preventDefault();
       window.location.hash = 'checkout';
     });
-
-    const password = dom.querySelector('input[type=password');
 
     password.addEventListener('keyup', event => this.checkPassword(event));
 

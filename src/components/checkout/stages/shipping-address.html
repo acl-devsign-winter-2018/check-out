@@ -1,17 +1,22 @@
 <form id="shipping-address">
   <fieldset>
-    <legend>Shipping</legend>
+    <legend class="clip">Shipping</legend>
 
     <label for="first-name">First name *</label>
       <input name="first-name" id="first-name" type="text" required>
+      <p class="error"></p>
     <label for="last-name">Last name *</label>
       <input name="last-name" id="last-name" type="text" required>
+      <p class="error"></p>
     <label for="address-1">Address Line 1 *</label>
       <input name="address-1" id="address-1" type="text" placeholder="Street address or PO box, etc." required>
+      <p class="error"></p>
     <label for="address-2">Address Line 2</label>
       <input name="address-2" id="address-2" placeholder="Apt., suite, unit, building, floor, etc." type="text">
+      <p class="error"></p>
     <label for="city">City *</label>
-      <input name="city" id="city" type="city" required>
+      <input name="city" id="city" type="city" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" title="No numbers or special characters allowed" required>
+      <p class="error"></p>
     <label for="state-providence">State / Providence *</label>
       <select name="state-providence" id="state-providence" required>
         <option value="select">Select</option>
@@ -67,6 +72,7 @@
         <option value="WI">Wisconsin</option>
         <option value="WY">Wyoming</option>
       </select>
+      <p class="error"></p>
     <label for="country">Country *</label>
       <select name="country" id="country" required>
         <option value="US">United States</option>
@@ -319,12 +325,17 @@
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
       </select>
+      <p class="error"></p>
     <label for="phone">Phone number *</label>
       <input name="phone" id="phone" type="tel" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <p class="error"></p>
       <p>We need your number in case there are any issues with your order</p>
-    <label for="billing-same">Use this address for billing</label>
-      <input name="billing-same" id="billing-same" type="checkbox">
 
-    <button type="submit">Continue</button>
+    <input name="billing-same" id="billing-same" type="checkbox">
+    <label for="billing-same">Use this address for billing</label>
+
   </fieldset>
+
+  <button type="submit" disabled>Continue</button>
+  
 </form>
