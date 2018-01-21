@@ -24,6 +24,8 @@ label {
   padding: 0 0 .5rem;
 }
 
+$input-height: 2.8rem;
+
 input {
   box-sizing: border-box;
   width: 100%;
@@ -49,4 +51,31 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background: #3b5243;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: rgb(78, 78, 78);
+}
+
+$show-pwd-width: 5rem;
+
+#passBlock{
+  position: relative;
+  
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $input-height;
+    width: $show-pwd-width;
+    background: #555;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: calc(100% - $show-pwd-width);
+  }
 }

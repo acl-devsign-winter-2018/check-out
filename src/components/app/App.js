@@ -14,8 +14,6 @@ const map = new Map();
 map.set('#techface', Techface);
 map.set('#register', Register);
 
-
-
 export default class App {
 
   constructor() {

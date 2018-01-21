@@ -13,6 +13,12 @@ export default class Register {
     console.log('test', obj);
   }
 
+  handleToggleShowPassword() {
+    const type = this.password.type;
+    this.password.type = type === 'password' ? 'text' : 'password';
+    this.showPassword.textContent = type === 'password' ? 'Hide' : 'Show';
+  }
+
   render() {
     const dom = template.clone();
 
@@ -22,34 +28,31 @@ export default class Register {
       this.handleSubmit(event.target);
     });
 
-    // form.addEventListener('blur', event => {
-    //   const element = event.srcElement;
-    //   if(element.type === 'submit') return;
-    //   element.nextElementSibling.textContent = element.validationMessage;
+    form.addEventListener('blur', event => {
+      const element = event.srcElement;
+      if(element.type === 'submit' || element.type === 'button') return;
+      element.nextElementSibling.textContent = element.validationMessage;
+      this.submit.disabled = !form.checkValidity();
+    }, true);
+  
 
-    //   const valid = form.checkValidity();
-    //   if(!valid) {
-    //     this.submit.setAttribute('disabled', 'true');
-    //   }
-    //   else {
-    //     this.submit.removeAttribute('disabled');
-    //   }
-    // }, true);
+    this.submit = dom.querySelector('button[type=submit');
 
-    // this.submit = dom.querySelector('button[type=submit');
+    this.showPassword = dom.querySelector('button[type=button]');
+    this.showPassword.addEventListener('click', () => this.handleToggleShowPassword());
 
-    // const password = dom.querySelector('input[name=password]');
+    this.password = dom.querySelector('input[name=password]');
     
-    // password.addEventListener('keyup', event => {
-    //   const target = event.target;
-    //   target.setCustomValidity('');
-    //   if(!target.checkValidity()) return;
+    this.password.addEventListener('keyup', event => {
+      const target = event.target;
+      target.setCustomValidity('');
+      if(!target.checkValidity()) return;
           
-    //   const valid = target.value.toLowerCase() !== target.value;
-    //   if(!valid) {
-    //     target.setCustomValidity('Password must contain at least one uppercase character');
-    //   }
-    // });
+      const valid = target.value.toLowerCase() !== target.value;
+      if(!valid) {
+        target.setCustomValidity('Password must contain at least one uppercase character');
+      }
+    });
 
     return dom;
   }
