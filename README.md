@@ -14,4 +14,4 @@ Use component architecture, blur event listeners, and the validation API to crea
 Changes / Reflection
 ===
 
-This was my first time working with the validation API, as well as creating a front-end router. I was able to create multiple types of form validation that responded quickly to input. I did not have enough time to place a sample product review page, or running total summary. 
+This was my first time working with the validation API, as well as creating a front-end router. I was able to create multiple types of form validation that responded quickly to input. I did not have enough time to place a sample product review page, or running total summary. The app is meant to be viewed only in mobile.
