@@ -1,0 +1,35 @@
+<h2>Secure Checkout</h2>
+<p>To complete checkout, use any of these sign-in or checkout options. Members: whichever option you choose, be sure to include your membership number to earn and use your Annual Dividend.</p>
+
+<div id="signin">
+  <form class="login">
+    <fieldset>
+      <legend><h3>Sign in to your REI Online Account</h3></legend>
+
+      <label for="email">Email</label>
+      <input name="email" id="email" type="email" required>
+      <p class="error"></p>
+
+      <label for="password">Password</label>
+      <input name="password" id="password" type="password" minlength="6" required>
+      <p class="error"></p>
+
+      <p class="password-description"> Your password should contain at least:</p>
+      <ul>
+        <li>6 minimum characters</li>
+        <li>One uppercase letter</li>
+      </ul>
+
+    </fieldset>
+
+    <button type="submit" disabled>Sign in</button>
+
+  </form>
+</div>
+
+<div id="guest-login">
+<h3>No REI Online Account? No problem!</h3>
+
+<button id="guest">Check out as Guest</button>
+
+</div>

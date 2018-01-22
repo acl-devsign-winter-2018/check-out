@@ -10,7 +10,7 @@
     "start": "webpack-dev-server",
     "build": "webpack"
   },
-  "author": "You <you@you.com>",
+  "author": "Grace <grace.g.provost@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.2.4",
