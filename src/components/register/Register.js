@@ -10,7 +10,7 @@ export default class Register {
     const data = new FormData(form);
     const obj = {};
     data.forEach((value, key) => obj[key] = value);
-    console.log('test', obj);
+    console.log('Form values:', obj);
   }
 
   handleToggleShowPassword() {
@@ -28,21 +28,19 @@ export default class Register {
       this.handleSubmit(event.target);
     });
 
+    this.submit = dom.querySelector('button[type=submit');
+
     form.addEventListener('blur', event => {
       const element = event.srcElement;
       if(element.type === 'submit' || element.type === 'button') return;
       element.nextElementSibling.textContent = element.validationMessage;
       this.submit.disabled = !form.checkValidity();
     }, true);
-  
-
-    this.submit = dom.querySelector('button[type=submit');
 
     this.showPassword = dom.querySelector('button[type=button]');
     this.showPassword.addEventListener('click', () => this.handleToggleShowPassword());
 
     this.password = dom.querySelector('input[name=password]');
-    
     this.password.addEventListener('keyup', event => {
       const target = event.target;
       target.setCustomValidity('');

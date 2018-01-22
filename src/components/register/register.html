@@ -6,25 +6,25 @@
 
     <legend>New Account Information</legend>
 
-    <label for="firstname">First Name:</label>
+    <label for="firstname"><span class="require">* </span>First Name:</label>
     <input name="firstname" id="firstname" type="text" placeholder="Johnny" required>
     <p class="error"></p>
     
-    <label for="lastname">Last Name:</label>
+    <label for="lastname"><span class="require">* </span>Last Name:</label>
     <input name="lastname" id="lastname" type="text" placeholder="Appleseed" required>
     <p class="error"></p>
 
-    <label for="email">Email:</label>
+    <label for="email"><span class="require">* </span>Email:</label>
     <input name="email" id="email" type="email"
     pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
     title="Please provde an email in the form of you@somedomain.sometld" placeholder="johnny@appleseed.com" required>
     <p class="error"></p>
 
-    <label for="phone">Phone:</label>
-    <input name="phone" id="phone" type="text" placeholder="503-333-3333" required>
+    <label for="phone"><span class="require">* </span>Phone:</label>
+    <input name="phone" id="phone" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="503-333-3333" required>
     <p class="error"></p>
 
-    <label for="password">Password:</label>
+    <label for="password"><span class="require">* </span>Password:</label>
     <p class="hint">Your password should be at least 6 characters long and contain at least one capital letter.</p>
     <div id="passBlock">
       <input name="password" id="password" type="password" minlength="6" required>
