@@ -4,7 +4,8 @@ import Template from '../Template';
 import { removeChildren } from '../dom';
 // import ShippingAddress from './stages/ShippingAddress';
 // import Billing from './stages/Billing';
-import ShippingMethod from './stages/ShippingAddress';
+// import ShippingMethod from './stages/ShippingMethod';
+import Payment from './stages/Payment';
 
 const template = new Template(html);
 
@@ -44,11 +45,11 @@ export default class Checkout {
     // const billing = new Billing();
     // this.checkoutStage.appendChild(billing.render());
     
-    const shippingMethod = new ShippingMethod();
-    this.checkoutStage.appendChild(shippingMethod.render());
+    // const shippingMethod = new ShippingMethod();
+    // this.checkoutStage.appendChild(shippingMethod.render());
 
-    // const payment = new Payment();
-    // this.checkoutStage.appendChild(payment.render());
+    const payment = new Payment();
+    this.checkoutStage.appendChild(payment.render());
 
     // const review = new Review();
     // this.checkoutStage.appendChild(review.render());

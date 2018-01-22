@@ -15,10 +15,23 @@ export default class ShippingAddress {
     const obj = {};
     data.forEach((value, key) => obj[key] = value);
     console.log('would have submitted', obj);
-    if(obj.billing) { //if needs billing address;
-      this.cb(false);
-    } else {
-      this.cb(true);
-    }
+    this.cb();
 
   }
+
+  render() {
+    const dom = template.clone();
+
+    const form = dom.querySelector('form');
+    
+    this.submit = dom.querySelector('button[type=submit]');
+    
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      this.handleSubmit(event.target);
+    });
+
+    return dom;
+  }
+}
+

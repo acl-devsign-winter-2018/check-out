@@ -1,0 +1,39 @@
+<form id="payment">
+    <fieldset>
+      <legend class="clip">Payment Method</legend>
+
+      <label for="credit">Card Number *</label>
+        <input name="credit" id="credit" type="text" maxlength="19" inputmode="numeric" required>
+        <p class="error"></p>
+
+      <label for="expiration">Expiration Date *</label>
+      <select name="expiration" id="expiration" required>
+        <option value="">Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <select name="expireYY" id="expireYY">
+          <option value="">Year</option>
+          <option value="10">2018</option>
+          <option value="11">2019</option>
+          <option value="12">2020</option>
+      </select> 
+      <label for="security">Security Code *</label>
+        <input name="security" id="security" type="text" minlength="3" maxlength="4" inputmode="numeric" pattern="[0-9]*" required>
+        <p class="error"></p>
+
+    </fieldset>
+  
+    <button type="submit" disabled>Continue</button>
+    
+  </form>
