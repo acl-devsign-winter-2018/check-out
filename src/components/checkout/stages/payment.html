@@ -2,11 +2,15 @@
     <fieldset>
       <legend class="clip">Payment Method</legend>
 
+      <label for="name">Name On Card *</label>
+        <input name="name" id="name" type="text" required>
+        <p class="error"></p>
+
       <label for="credit">Card Number *</label>
         <input name="credit" id="credit" type="text" maxlength="19" inputmode="numeric" required>
         <p class="error"></p>
 
-      <label for="expiration">Expiration Date *</label>
+      <label for="expiration">Expiration Month *</label>
       <select name="expiration" id="expiration" required>
         <option value="">Month</option>
         <option value="01">January</option>
@@ -22,15 +26,17 @@
         <option value="11">November</option>
         <option value="12">December</option>
       </select>
+      <label for="expireYY">Expiration Year *</label>
       <select name="expireYY" id="expireYY">
           <option value="">Year</option>
           <option value="10">2018</option>
           <option value="11">2019</option>
           <option value="12">2020</option>
       </select> 
-      <label for="security">Security Code *</label>
+      <label for="security">Security Code *<span>&#10067;</span></label>
         <input name="security" id="security" type="text" minlength="3" maxlength="4" inputmode="numeric" pattern="[0-9]*" required>
         <p class="error"></p>
+      <div class="cvv-image"><img src="cvv.png" alt="where to find your cvv code"></div>
 
     </fieldset>
   

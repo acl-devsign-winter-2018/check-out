@@ -46,8 +46,8 @@ export default class ShippingAddress {
   }
 
   securityCodeCheck(element) {
-    if(/[a-z]/i.test(element.value)) {
-      element.nextElementSibling.textContent = 'numeric values only';
+    if(/[a-z]/i.test(element.value)) { //checks for letters
+      element.nextElementSibling.textContent = 'numbers only';
     } else {
       element.nextElementSibling.textContent = element.validationMessage;
     }
