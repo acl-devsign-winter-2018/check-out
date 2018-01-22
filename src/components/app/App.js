@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from '../home/Home.js';
 import Techface from '../techface/Techface.js';
 import Register from '../register/Register.js';
+import Checkout from '../checkout/Checkout.js';
 import { removeChildren } from '../dom';
 
 const template = new Template(html);
@@ -13,6 +14,7 @@ const template = new Template(html);
 const map = new Map();
 map.set('#techface', Techface);
 map.set('#register', Register);
+map.set('#checkout', Checkout);
 
 export default class App {
 
