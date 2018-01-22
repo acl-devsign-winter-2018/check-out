@@ -22,6 +22,10 @@ export default class ShippingAddress {
   //the folling two functions were found on stack overflow to check for credit card validation
   validateCardNumber(number, element) {
     var regex = new RegExp('^[0-9]*');
+    if(number === '') {
+      element.nextElementSibling.textContent = element.validationMessage;
+      return;
+    }
     if(!regex.test(number)) {
       element.nextElementSibling.textContent = 'numbers only';
     } else {
@@ -68,6 +72,8 @@ export default class ShippingAddress {
     form.addEventListener('blur', event => {
       const element = event.srcElement;
       if(element.type === 'submit') return;
+      if(element.id === 'expiration') return;
+      if(element.id === 'expireYY') return;
       if(element.id === 'credit') {
         this.validateCardNumber(element.value, element);
       }
@@ -76,9 +82,9 @@ export default class ShippingAddress {
         this.securityCodeCheck(element);
       }
           
-      // if(element.id !== 'credit') {
-      //   element.nextElementSibling.textContent = element.validationMessage;
-      // }
+      if(element.id !== 'credit' && element.id !== 'security') {
+        element.nextElementSibling.textContent = element.validationMessage;
+      }
 
       const valid = form.checkValidity();
       if(!valid) {
