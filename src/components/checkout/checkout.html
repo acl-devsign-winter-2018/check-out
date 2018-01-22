@@ -6,33 +6,49 @@
 
     <legend>Checkout Form</legend>
 
-    <label for="firstname"><span class="require">* </span>First Name:</label>
-    <input name="firstname" id="firstname" type="text" placeholder="Johnny" required>
+    <label for="cardname"><span class="require">* </span>Name on Card:</label>
+    <input name="cardname" id="cardname" type="text" placeholder="Johnny Appleseed" required>
     <p class="error"></p>
     
-    <label for="lastname"><span class="require">* </span>Last Name:</label>
-    <input name="lastname" id="lastname" type="text" placeholder="Appleseed" required>
+    <label for="cardnumber"><span class="require">* </span>Card Number:</label>
+    <input name="cardnumber" id="cardnumber" type="text" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" placeholder="3333-3333-3333-3333" required>
     <p class="error"></p>
 
-    <label for="email"><span class="require">* </span>Email:</label>
-    <input name="email" id="email" type="email"
-    pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
-    title="Please provde an email in the form of you@somedomain.sometld" placeholder="johnny@appleseed.com" required>
-    <p class="error"></p>
-
-    <label for="phone"><span class="require">* </span>Phone:</label>
-    <input name="phone" id="phone" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="503-333-3333" required>
-    <p class="error"></p>
-
-    <label for="password"><span class="require">* </span>Password:</label>
-    <p class="hint">Your password should be at least 6 characters long and contain at least one capital letter.</p>
-    <div id="passBlock">
-      <input name="password" id="password" type="password" minlength="6" required>
-      <p class="error"></p>
-      <button type="button" class="show-password" tabindex="-1">Show</button>
+    <label for="expDate"><span class="require">* </span>Expiration Date:</label>
+    <div id="dateWrap">
+      <select name="expMonth" id="expMonth">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <select name="expYear" id="expYear">
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+          </select>
     </div>
+    <p class="error"></p>
+
+    <label for="code"><span class="require">* </span>CVV / CVC:</label>
+    <div class="codeBlock">
+      <input name="code" id="code" type="number" pattern="^\d{3}$" placeholder="999" required>
+      <p class="hint"><span class="require">* </span>CVV or CVC is the card security code, unique three digits number on the back of your card.</p>      
+    </div>
+    <p class="error"></p>
+
 
   </fieldset>
-  <button type="submit" disabled>Create Account</button>
+  <button type="submit" disabled>Complete Order</button>
 
 </form>

@@ -1,0 +1,27 @@
+#code {
+  width: 6rem;
+}
+
+.codeBlock {
+  display: flex;
+}
+
+.codeBlock p {
+  margin: 0 0 0 1rem;
+}
+
+select {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(197, 197, 197);
+  font-size: 1rem;
+  color: rgb(36, 36, 36);
+  /* padding:  */
+}
+
+option {
+  /* padding: 50px; */
+  color: black;
+}
