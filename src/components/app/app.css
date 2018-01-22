@@ -16,3 +16,12 @@ footer {
 .hidden {
   display: none;
 }
+
+/*  -------- Media Queries ------- */
+
+/* Mobile */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+}
