@@ -4,8 +4,6 @@ form {
   margin: 3rem 0 0 0;
 }
 
-/* want to hide fieldset/legend but keep the form accessible?
-   http://chadkuehn.com/hidden-accessible-fieldsets/ */
 fieldset legend {
   border: 0;
   padding: 0;

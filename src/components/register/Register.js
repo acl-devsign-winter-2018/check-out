@@ -11,6 +11,7 @@ export default class Register {
     const obj = {};
     data.forEach((value, key) => obj[key] = value);
     console.log('Form values:', obj);
+    location.hash = '#checkout';
   }
 
   handleToggleShowPassword() {
