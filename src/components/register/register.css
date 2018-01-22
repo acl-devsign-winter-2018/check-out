@@ -1,6 +1,7 @@
 form {
   width: 100%;
   max-width: 600px;
+  margin: 3rem 0 0 0;
 }
 
 /* want to hide fieldset/legend but keep the form accessible?
@@ -109,7 +110,8 @@ $show-pwd-width: 5rem;
 }
 
 .require {
-  color: red;
+  color: rgb(212, 3, 3);
+  font-size: 1.2rem;
 }
 
 .error {
