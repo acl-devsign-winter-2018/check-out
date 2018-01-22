@@ -330,12 +330,13 @@
       <input name="phone" id="phone" type="tel" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
       <p class="error"></p>
       <p>We need your number in case there are any issues with your order</p>
-
-    <input name="billing" id="billing" type="checkbox">
-    <label for="billing">Use this address for billing</label>
+    <div id="billing-container">
+      <input name="billing" id="billing" type="checkbox">
+      <label for="billing">Use this address for billing</label>
+    </div>
 
   </fieldset>
 
-  <button type="submit" disabled>Continue</button>
+  <button class="checkout-button"  type="submit" disabled>Continue</button>
   
 </form>

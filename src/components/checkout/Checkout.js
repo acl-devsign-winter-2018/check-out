@@ -13,7 +13,15 @@ const template = new Template(html);
 export default class Checkout {
 
   handleShippingAddressSubmit(needsBilling) {
-    if(needsBilling) { //if billing info is needed
+    if(needsBilling) this.needsBilling = true;
+
+    removeChildren(this.checkoutStage);
+    const shippingMethod = new ShippingMethod(() => this.handleShippingMethodSubmit());
+    this.checkoutStage.appendChild(shippingMethod.render());
+  }
+
+  handleShippingMethodSubmit() {
+    if(this.needsBilling) {
       removeChildren(this.checkoutStage);
       const billing = new Billing(() => this.handleBillingAddressSubmit());
       this.checkoutStage.appendChild(billing.render());
@@ -21,8 +29,10 @@ export default class Checkout {
       this.billing.classList.add('active');
     } else {
       removeChildren(this.checkoutStage);
-      const shippingMethod = new ShippingMethod(this.handleShippingMethodSubmit());
-      this.checkoutStage.appendChild(shippingMethod.render());
+      const payment = new Payment(() => this.handlePaymentSubmit());
+      this.checkoutStage.appendChild(payment.render());
+      this.shipping.classList.remove('active');
+      this.payment.classList.add('active');
     }
   }
 
@@ -31,14 +41,6 @@ export default class Checkout {
     const payment = new Payment(() => this.handlePaymentSubmit());
     this.checkoutStage.appendChild(payment.render());
     this.billing.classList.remove('active');
-    this.payment.classList.add('active');
-  }
-
-  handleShippingMethodSubmit() {
-    removeChildren(this.checkoutStage);
-    const payment = new Payment(() => this.handlePaymentSubmit());
-    this.checkoutStage.appendChild(payment.render());
-    this.shipping.classList.remove('active');
     this.payment.classList.add('active');
   }
 

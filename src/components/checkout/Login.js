@@ -11,9 +11,10 @@ export default class Login {
     const obj = {};
     data.forEach((value, key) => obj[key] = value);
     console.log('would have submitted', obj);
+    window.location.hash = 'checkout';
   }
 
-  checkPassword(password) { //TODO: stretch goal add number
+  checkPassword(password) {
     const target = password.target;
     target.setCustomValidity('');
     if(!target.checkValidity()) return; //check for minimum length

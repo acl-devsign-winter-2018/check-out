@@ -28,21 +28,21 @@
       </select>
 
       <label for="expireYY">Expiration Year *</label>
-      <select name="expireYY" id="expireYY">
+      <select name="expireYY" id="expireYY" required>
           <option value="">Year</option>
           <option value="10">2018</option>
           <option value="11">2019</option>
           <option value="12">2020</option>
       </select> 
 
-      <label for="security">Security Code *<span>&#10067;</span></label>
+      <label for="security">Security Code *<span id="question">&#10067;</span></label>
         <input name="security" id="security" type="text" minlength="3" maxlength="4" inputmode="numeric" pattern="[0-9]*" required>
         <p class="error"></p>
         
-      <div class="cvv-image"><img src="cvv.png" alt="where to find your cvv code"></div>
+      <div id="cvv-image" class="hidden"><img src="cvv.png" alt="where to find your cvv code"></div>
 
     </fieldset>
   
-    <button type="submit" disabled>Continue</button>
+    <button class="checkout-button" type="submit" disabled>Continue</button>
     
   </form>

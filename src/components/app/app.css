@@ -1,3 +1,133 @@
-p {
-  color: steelblue;
+header {
+  background-color: #3F7D20;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    margin-top: 1rem;
+    margin-right: .5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+ 
+  a {
+    color: #FFF;
+    font-size: 1.2rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    width: 100px;
+    margin: .5rem;
+  }
+
+  a > img {
+    width: 40px;
+  }
+}
+
+main {
+  margin-top: 1rem;
+  padding: .5rem;
+  flex: 1;
+}
+
+fieldset {
+  display: flex;
+
+  ul {
+    margin-bottom: .5rem;
+  }
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 90%;
+  border: 1px solid #555;
+  padding: .5rem;
+  vertical-align: bottom;
+}
+
+button {
+  background-color: #72B01D;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.checkout-button {
+  margin: .5rem auto;
+}
+
+form:invalid {
+  button {
+    background-color: #C2C5CE;
+  }
+}
+
+footer {
+  background: #72B01D;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+}
+
+.active {
+  color: #3F7D20;
+  text-decoration: underline;
+}
+
+
+select {
+  font-size: 1rem;
+  border: 1px solid black;
+  width: 90%;
+}
+input[type='checkbox'] {
+  width: inherit;
+  display: inline-block;
+  margin: inherit;
+  margin-right: 1rem;
+}
+#billing-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.hidden {
+  display: none;
+}
+
+.shipping-container {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5rem;
+
+  input {
+    width: inherit;
+    display: inline-block;
+    margin: inherit;
+    margin-right: 1rem;
+  }
+}
+
+/* hide screen-reader only text. https://webaim.org/techniques/css/invisiblecontent/ */
+.clip {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }

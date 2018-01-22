@@ -27,12 +27,11 @@ export default class ShippingAddress {
       return;
     }
     if(!regex.test(number)) {
-      element.nextElementSibling.textContent = 'numbers only';
+      element.nextElementSibling.textContent = 'Numbers only';
     } else {
-      this.luhnCheck(number) ? element.nextElementSibling.innerHTML = '&#10003;' : element.nextElementSibling.textContent = 'invalid card number';
+      this.luhnCheck(number) ? element.nextElementSibling.innerHTML = '&#10003;' : element.nextElementSibling.textContent = 'Invalid card number';
     }
   }
-  // 4147215001354109
 
   luhnCheck(val) {
     var sum = 0;
@@ -61,6 +60,8 @@ export default class ShippingAddress {
     const dom = template.clone();
 
     const form = dom.querySelector('form');
+    const question = dom.querySelector('#question');
+    const cvv = dom.querySelector('#cvv-image')
     
     this.submit = dom.querySelector('button[type=submit]');
     
@@ -72,8 +73,6 @@ export default class ShippingAddress {
     form.addEventListener('blur', event => {
       const element = event.srcElement;
       if(element.type === 'submit') return;
-      if(element.id === 'expiration') return;
-      if(element.id === 'expireYY') return;
       if(element.id === 'credit') {
         this.validateCardNumber(element.value, element);
       }
@@ -82,7 +81,7 @@ export default class ShippingAddress {
         this.securityCodeCheck(element);
       }
           
-      if(element.id !== 'credit' && element.id !== 'security') {
+      if(element.id !== 'credit' && element.id !== 'security' && element.id === 'expireYY' && element.id === 'expiration') {
         element.nextElementSibling.textContent = element.validationMessage;
       }
 
@@ -93,6 +92,10 @@ export default class ShippingAddress {
         this.submit.removeAttribute('disabled');
       }
     }, true);
+
+    question.addEventListener('click', () => {
+      cvv.classList.toggle('hidden');
+    });
 
     return dom;
   }
