@@ -1,4 +1,4 @@
-
+// Store api call in local storage, instead of calling it on every reload
 let get = url => fetch(url).then(response => response.json());
 
 if(process.env.NODE_ENV !== 'production') {
