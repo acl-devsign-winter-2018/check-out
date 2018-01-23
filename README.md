@@ -1,24 +1,17 @@
-Check Out
+Objective
+===
+Build a mobile first checkout form based on the faults of a real world website. Add front end validation with accurate messages.
+
+- Use vanilla JS components as appropriate to modularize the app
+- Use JavaScript, DOM Events and the Form Validity API to provide a great user experience.
+
+
+Steps Taken
 ===
 
-This lab requires you to build out your checkout form you have been designing this week.
+Use component architecture, blur event listeners, and the validation API to create a fast-responding feedback experience. Recreate the login page with password and username guidance. Have form submit buttons inactive unless the form is valid. Create a shipping address, billing address, shipping method, payment, and review page. If the billing address is same as shipping, have user skip billing page. This lab took me ~10 hours.
 
-1. Implement your design
-1. Use components as appropriate to modularize your app
-1. Use JavaScript, DOM Events and the Form Validity API to provide a great
-user experience.
-1. Pay attention to detail and prioritize clean code for humans
+Changes / Reflection
+===
 
-Please refer to the in-class example for ways you can use JavaScript to improve the user experience.
-
-## Rubric
-
-* Design Implementation (Was the design built as intended) **5pts**
-* Usability and Accessibility **5pts**
-* Use of JavaScript and DOM Events **5pts**
-* Clean, organized, easy to understand code **5pts**
-
-## Stretch Goals
-
-* Implement a router and create multiple pages
-* Implement your cart page
+This was my first time working with the validation API, as well as creating a front-end router. I was able to create multiple types of form validation that responded quickly to input. I did not have enough time to place a sample product review page, or running total summary. The app is meant to be viewed only in mobile.
