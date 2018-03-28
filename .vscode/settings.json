@@ -7,6 +7,8 @@
     "htmlhint",
     "htmlhintrc",
     "in",
+    "noopener",
+    "noreferrer",
     "paren",
     "parens",
     "plugin",
