@@ -1,0 +1,22 @@
+
+.ul {
+  display: flex;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+.logo {
+  color: #0553ac;
+  border-bottom: 0px;
+  transition: none;
+  font-size: 3.5rem;
+}
+
+.logo:hover {
+  color: #0553ac;
+  border-bottom: 0px;
+}
+
+
