@@ -17,4 +17,4 @@ if(process.env.NODE_ENV !== 'production') {
   get = memoize(get);
 }
 
-export { get };
+export{ get };
