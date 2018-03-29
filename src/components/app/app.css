@@ -1,0 +1,33 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+main {
+  margin: 0 0 100px; 
+  padding: 25px;
+}
+
+
+#footer {
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  overflow:hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+
+
