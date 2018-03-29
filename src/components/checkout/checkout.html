@@ -1,0 +1,48 @@
+<form class="checkout">
+    <fieldset>
+      <legend>Checkout Form</legend>
+  
+      <label for="cardname"><span class="require">* </span>Name on Card:</label>
+      <input name="cardname" id="cardname" type="text" placeholder="John Doe" required>
+      <p class="error"></p>
+      
+      <label for="cardnumber"><span class="require">* </span>Card Number:</label>
+      <input name="cardnumber" id="cardnumber" type="text" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" placeholder="3333-3333-3333-3333" required>
+      <p class="error"></p>
+  
+      <label for="expMonth"><span class="require">* </span>Expiration Date: Month</label> 
+        <select name="expMonth" id="expMonth">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      <p class="error"></p>
+      <label for="expYear"><span class="require">* </span>Expiration Date: Year</label>
+        <select name="expYear" id="expYear">
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+        </select>
+      <p class="error"></p>
+      <label for="code"><span class="require">* </span>CVV / CVC:</label>
+      <div class="credit">
+        <input name="code" id="code" type="number" pattern="^\d{3}$" placeholder="123" required>
+        <p class="hint"><span class="require">* </span>CVV or CVC is card security code, three digits number on the back of card.</p>      
+      </div>
+      <p class="error"></p>
+  
+    </fieldset>
+    <button type="submit" disabled>Complete Order</button>
+  
+  </form>

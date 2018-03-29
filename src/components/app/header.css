@@ -1,0 +1,39 @@
+header {
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #083548;
+  background:#08354836;
+}
+
+.ul {
+  display: flex;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+.logo {
+  color: #083548;
+  border-bottom: 1px;
+  transition: none;
+  font-size: 3rem;
+}
+
+.logo:hover {
+  color: #ca9012;
+  border-bottom: 0px;
+}
+
+li{
+  padding: 0 .7rem;
+}
+
+a {
+  color: #083548;
+}
+
+
+
